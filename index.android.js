@@ -7,19 +7,17 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  View
+  View,
+  Text
 } from 'react-native';
 import App from './src/cpn/App';
 
 export default class DemoShop extends Component {
   render() {
     return (
-      <View >
-        <App />
-      </View>
+      <App />
     );
   }
 }
-
 
 AppRegistry.registerComponent('DemoShop', () => DemoShop);
