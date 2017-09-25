@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import App from './src/cpn/App';
 
-export default class SampleReactNativeApp extends Component {
+export default class DemoShop extends Component {
   render() {
     return (
       <View >
@@ -22,4 +22,4 @@ export default class SampleReactNativeApp extends Component {
 }
 
 
-AppRegistry.registerComponent('SampleReactNativeApp', () => SampleReactNativeApp);
+AppRegistry.registerComponent('DemoShop', () => DemoShop);

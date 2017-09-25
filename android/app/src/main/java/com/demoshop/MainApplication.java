@@ -1,4 +1,4 @@
-package com.samplereactnativeapp;
+package com.demoshop;
 
 import android.app.Application;
 
