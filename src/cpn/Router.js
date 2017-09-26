@@ -1,4 +1,3 @@
-import React from 'react';
 import { StackNavigator } from 'react-navigation';
 import Main from './Main/Main';
 import Authernication from './Authernication/Authernication';

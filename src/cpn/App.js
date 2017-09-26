@@ -7,7 +7,7 @@ StatusBar.setHidden(true);
 export default class App extends Component {
     render() {
         return (
-            <HomeStack />
+            <HomeStack style={{ flex: 1 }} />
         );
     }
 }

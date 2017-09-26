@@ -1,26 +1,32 @@
 import React, { Component } from 'react';
-import { View,
-         Text,
-         TouchableOpacity } from 'react-native';
+import Drawer from 'react-native-drawer';
+import Menu from './Menu';
+import Shop from './Shop/Shop';
+
 
 export default class Main extends Component {
     gotoAuth() {
         this.props.navigation.navigate('Auth_Screen');
     }
+
+    closeControlPanel = () => {
+        this.drawer.close();
+    };
+
+    openControlPanel = () => {
+        this.drawer.open();
+    };
+
     render() {
         return (
-            <View>
-            <Text>
-                Main Cpn
-            </Text>
-            <TouchableOpacity
-             onPress={this.gotoAuth.bind(this)}
+            <Drawer
+            ref={(ref) => { this.drawer = ref; }}
+            content={<Menu navigation={this.props.navigation} />}
+            openDrawerOffset={0.4}
+            tapToClose
             >
-            <Text>
-                Authernication
-            </Text>
-            </TouchableOpacity>
-            </View>
+            <Shop open={this.openControlPanel.bind(this)} />
+            </Drawer>
         );
     }
 }
