@@ -23,7 +23,7 @@ const DrawerNav = DrawerNavigator({
         screen: OderHistory 
     } 
 }, {
-    drawerWidth: height / 4,
+    drawerWidth: height / 3,
     initialRouteName: 'Shop_Screen', /*screen gốc  */
     contentComponent: props => <Menu {...props} />, /*sử dụng component để làm drawer */
 });
