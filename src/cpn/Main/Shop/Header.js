@@ -6,8 +6,8 @@ import { Text,
          Image,
          StyleSheet,
          TextInput } from 'react-native';
-import icMenu from '../../../meida/appIcon/ic_menu.png';
-import icLogo from '../../../meida/appIcon/ic_logo.png';
+import icMenu from '../../../media/appIcon/ic_menu.png';
+import icLogo from '../../../media/appIcon/ic_logo.png';
 
 const { height } = Dimensions.get('window');
 

@@ -12,6 +12,8 @@ import Cart from './Cart/Cart';
 import Search from './Search/Search';
 import Header from './Header';
 
+const { height } = Dimensions.get('window');
+
 const TabNavigatorShop = TabNavigator({
     Home: {
         screen: Home,
@@ -26,18 +28,31 @@ const TabNavigatorShop = TabNavigator({
         screen: Search,
     }
 }, {
-    tabBarPosition: 'bottom',
+        tabBarPosition: 'bottom',
         animationEnabled: true,
         tabBarOptions: {
-            activeTintColor: 'red',
-        }
+            showIcon: 'true',
+            labelStyle: {
+                fontSize: 9
+            },
+            iconStyle: {
+                width: 26,
+                height: 26
+            },
+            style: {
+                backgroundColor: '#e3e7ed',
+                height: height / 10,
+            },
+            activeTintColor: '#28B08A',
+            inactiveTintColor: '#666f7c',
+        },
+        lazy: true
     }
 );
 
 export default class Shop extends Component {
     openMenu() {
-        const { open } = this.props;
-        open();
+        this.props.navigation.navigate('DrawerOpen');
     }
 
     render() {
