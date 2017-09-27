@@ -7,6 +7,7 @@ import { View,
 import { COLOR, ThemeProvider, Card } from 'react-native-material-ui';
 import BannerImg from '../../../../media/temp/banner.jpg';
 
+//Lấy kích thước của màn hình
 const { height, width } = Dimensions.get('window');
 
 const uiTheme = {
@@ -25,16 +26,13 @@ export default class Collection extends Component {
                 textStyle,
                 imgStyle } = styles;
         return (
-            // <View style={wapper} >
-            //    <Text> Collection </Text>
-            // </View>
-            <ThemeProvider uiTheme={uiTheme}>
+            //Cần thêm ThemeProvider để sử dụng các Component ở Material Ui
+            <ThemeProvider uiTheme={uiTheme}> 
                <Card style={{ container: wapper }}>
                    <View style={{ flex: 1 }}>
                     <Text style={textStyle}> String Collection </Text>
                    </View>
                    <Image
-                   //933x465
                    source={BannerImg}
                    style={imgStyle}
                    />

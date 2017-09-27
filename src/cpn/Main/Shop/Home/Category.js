@@ -30,6 +30,7 @@ export default class Category extends Component {
         };
     }
     
+    //Hien thi hinh anh o Swipper
     componentWillMount() {
         setTimeout(() => this.setState({
             renderSwiper: true
@@ -46,7 +47,7 @@ export default class Category extends Component {
             <Swiper
             autoplay
             autoplayTimeout={3}
-            setTimeout={1}
+            setTimeout={1} //Hien thi hinh anh o swipper
             showsButtons
             >
                 <View >

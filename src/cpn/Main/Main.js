@@ -7,33 +7,6 @@ import Authernication from '../Authernication/Authernication';
 import ChangeInfo from '../ChangeInfo/ChangeInfo';
 import OderHistory from '../OderHistory/OderHistory';
 
-
-// export default class Main extends Component {
-//     gotoAuth() {
-//         this.props.navigation.navigate('Auth_Screen');
-//     }
-
-//     closeControlPanel = () => {
-//         this.drawer.close();
-//     };
-
-//     openControlPanel = () => {
-//         this.drawer.open();
-//     };
-
-//     render() {
-//         return (
-//             <Drawer
-//             ref={(ref) => { this.drawer = ref; }}
-//             content={<Menu navigation={this.props.navigation} />}
-//             openDrawerOffset={0.4}
-//             tapToClose
-//             >
-//             <Shop open={this.openControlPanel.bind(this)} />
-//             </Drawer>
-//         );
-//     }
-// }
 const { height } = Dimensions.get('window');
 
 const DrawerNav = DrawerNavigator({
@@ -51,8 +24,8 @@ const DrawerNav = DrawerNavigator({
     } 
 }, {
     drawerWidth: height / 4,
-    initialRouteName: 'Shop_Screen',
-    contentComponent: props => <Menu {...props} />,
+    initialRouteName: 'Shop_Screen', /*screen gốc  */
+    contentComponent: props => <Menu {...props} />, /*sử dụng component để làm drawer */
 });
 
 export default class Main extends Component {

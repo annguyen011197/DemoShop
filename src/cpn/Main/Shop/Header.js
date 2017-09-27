@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { Text,
-         View,
-         TouchableOpacity,
-         Dimensions,
-         Image,
-         StyleSheet,
-         TextInput } from 'react-native';
+import {
+    Text,
+    View,
+    TouchableOpacity,
+    Dimensions,
+    Image,
+    StyleSheet,
+    TextInput
+} from 'react-native';
 import icMenu from '../../../media/appIcon/ic_menu.png';
 import icLogo from '../../../media/appIcon/ic_logo.png';
 
@@ -13,6 +15,7 @@ const { height } = Dimensions.get('window');
 
 export default class Header extends Component {
     render() {
+        //Nên khai báo để dùng cho nhanh
         const { iconContainerLeft,
             iconContainerRight,
             container,
@@ -21,42 +24,45 @@ export default class Header extends Component {
             icon,
             text,
             textInput,
-            textInputContainer
+            textInputContainer,
+            wapper
                } = styles;
         return (
-            <View style={{ height: height / 7, backgroundColor: '#568fea', alignItems: 'center' }}>
+            <View
+                style={wapper}
+            >
                 <View style={container}>
                     <View style={iconContainerLeft}>
-                    <TouchableOpacity
-                    onPress={this.props.openMenu}
-                    style={iconContainer}
-                    >
-                        <Image
-                        source={icMenu}
-                        style={icon}
-                        />
-                    </TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={this.props.openMenu}
+                            style={iconContainer}
+                        >
+                            <Image
+                                source={icMenu}
+                                style={icon}
+                            />
+                        </TouchableOpacity>
                     </View>
                     <View style={textContainer}>
                         <Text style={text}>Wearing a Dress</Text>
                     </View>
                     <View style={iconContainerRight}>
-                    <View style={iconContainer}>
-                    <Image
-                        source={icLogo}
-                        style={icon}
-                    />
-                    </View>
+                        <View style={iconContainer}>
+                            <Image
+                                source={icLogo}
+                                style={icon}
+                            />
+                        </View>
                     </View>
                 </View>
                 <View style={textInputContainer}>
-                <TextInput
-                 style={textInput}
-                 underlineColorAndroid='transparent'
-                 placeholder='What do you want to buy ?'
-                />
+                    <TextInput
+                        style={textInput}
+                        underlineColorAndroid='transparent'
+                        placeholder='What do you want to buy ?'
+                    />
                 </View>
-            </View>            
+            </View>
         );
     }
 }
@@ -80,7 +86,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end'
     },
     iconContainer: {
-        width: '50%', 
+        width: '50%',
         alignSelf: 'center'
     },
     textContainer: {
@@ -88,7 +94,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around'
     },
     icon: {
-        height: '70%', 
+        height: '70%',
         width: '80%',
         alignItems: 'center'
     },
@@ -103,12 +109,17 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '80%',
         textAlignVertical: 'center',
-        paddingLeft: 10                        
+        paddingLeft: 10
     },
     textInputContainer: {
         flex: 5,
         backgroundColor: '#568fea',
         alignItems: 'center',
         width: '90%'
+    },
+    wapper: {
+        height: height / 7,
+        backgroundColor: '#568fea',
+        alignItems: 'center'
     }
 });

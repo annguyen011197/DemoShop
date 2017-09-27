@@ -12,6 +12,7 @@ import icHome from '../../../../media/appIcon/home.png';
 
 
 export default class Home extends Component {
+    //Set thông tin đầu của mỗi screen 
     static navigationOptions = {
         showLabel: false,
         tabBarIcon: ({ tintColor }) => (
@@ -25,9 +26,6 @@ export default class Home extends Component {
 
     render() {
         return (
-            // <View style={{ flex: 1, backgroundColor: '#CED8E7' }}>
-            //     <TopProduct />
-            // </View>
             <ScrollView style={{ flex: 1, backgroundColor: '#CED8E7' }}>
                 <Collection />
                 <Category />
