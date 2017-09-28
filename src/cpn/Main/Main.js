@@ -24,7 +24,7 @@ const DrawerNav = DrawerNavigator({
     } 
 }, {
     drawerWidth: height / 3,
-    initialRouteName: 'Auth_Screen', /*screen gốc  */
+    initialRouteName: 'Shop_Screen', /*screen gốc  */
     contentComponent: props => <Menu {...props} />, /*sử dụng component để làm drawer */
 });
 

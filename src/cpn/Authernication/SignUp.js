@@ -15,7 +15,7 @@ const { height } = Dimensions.get('window');
 
 const uiTheme = {
     palette: {
-        primaryColor: 'green',
+        primaryColor: 'white',
     },
     toolbar: {
         container: {
@@ -67,6 +67,9 @@ export default class SignIn extends Component {
                                 borderRadius: 6,
                                 borderWidth: 1,
                                 borderColor: 'white'
+                            },
+                            text: {
+                                color: 'white'
                             }
                         }}
                     />

@@ -57,6 +57,9 @@ export default class SignIn extends Component {
                                 borderRadius: 6,
                                 borderWidth: 1,
                                 borderColor: 'white'
+                            },
+                            text: {
+                                color: 'white'
                             }
                         }}
                     />
@@ -79,7 +82,7 @@ const styles = StyleSheet.create({
         height: '10%',
         alignSelf: 'center',
         borderRadius: 6,
-        color: '#D4D4D4',
+        color: '#1E1E1E',
         padding: 12,
         alignItems: 'center'
     },

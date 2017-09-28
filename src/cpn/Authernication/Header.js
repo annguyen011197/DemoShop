@@ -4,7 +4,8 @@ import {
     Text,
     Image,
     StyleSheet,
-    Dimensions
+    Dimensions,
+    TouchableOpacity
 } from 'react-native';
 import icLogo from '../../media/appIcon/ic_logo.png';
 import icBack from '../../media/appIcon/back_white.png';
@@ -12,6 +13,10 @@ import icBack from '../../media/appIcon/back_white.png';
 const { height } = Dimensions.get('window');
 
 export default class Header extends Component {
+    goBack() {
+        const { navigation } = this.props;
+        navigation.navigate('Shop_Screen');
+    }
     render() {
         const { iconContainerLeft,
             iconContainerRight,
@@ -28,15 +33,15 @@ export default class Header extends Component {
             >
                 <View style={container}>
                     <View style={iconContainerLeft}>
-                        <View
-                            onPress={this.props.openMenu}
+                        <TouchableOpacity
+                            onPress={this.goBack.bind(this)}
                             style={iconContainer}
                         >
                             <Image
                                 source={icBack}
                                 style={icon}
                             />
-                        </View>
+                        </TouchableOpacity>
                     </View>
                     <View style={textContainer}>
                         <Text style={text}>Wearing a Dress</Text>
