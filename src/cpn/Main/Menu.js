@@ -120,7 +120,7 @@ export default class Menu extends Component {
                         </View>
                         <ButtonCustom 
                         name='SIGN IN' 
-                        onPress={this.signin.bind(this)}
+                        onPress={this.gotoAuth.bind(this)}
                         />
                     </View>
                 </ThemeProvider>
