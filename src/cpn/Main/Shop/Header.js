@@ -109,7 +109,8 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '80%',
         textAlignVertical: 'center',
-        paddingLeft: 10
+        paddingLeft: 10,
+        fontSize: 10
     },
     textInputContainer: {
         flex: 5,

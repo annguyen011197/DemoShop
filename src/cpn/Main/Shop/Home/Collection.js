@@ -3,7 +3,8 @@ import { View,
          Text,
          Image,
          StyleSheet,
-         Dimensions } from 'react-native';
+         Dimensions,
+         TouchableOpacity } from 'react-native';
 import { COLOR, ThemeProvider, Card } from 'react-native-material-ui';
 import BannerImg from '../../../../media/temp/banner.jpg';
 
@@ -21,6 +22,11 @@ const uiTheme = {
 };
 
 export default class Collection extends Component {
+    gotoListProduct() {
+        // const { goto } = this.props;
+        // goto();
+        this.props.navigation.navigate('List_Product');
+    }
     render() {
         const { wapper,
                 textStyle,
@@ -28,6 +34,9 @@ export default class Collection extends Component {
         return (
             //Cần thêm ThemeProvider để sử dụng các Component ở Material Ui
             <ThemeProvider uiTheme={uiTheme}> 
+            <TouchableOpacity
+             onPress={this.gotoListProduct.bind(this)}
+            > 
                <Card style={{ container: wapper }}>
                    <View style={{ flex: 1 }}>
                     <Text style={textStyle}> String Collection </Text>
@@ -37,6 +46,7 @@ export default class Collection extends Component {
                    style={imgStyle}
                    />
                 </Card>
+             </TouchableOpacity >
             </ThemeProvider>
         );
     }

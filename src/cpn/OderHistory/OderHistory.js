@@ -6,7 +6,7 @@ export default class OderHistory extends Component {
     render() {
         return (
             <Text>
-                OderHistory Cpn
+                OderHistory Cpn A
             </Text>
         );
     }

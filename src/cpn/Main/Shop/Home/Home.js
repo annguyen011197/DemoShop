@@ -5,9 +5,12 @@ import {
     StyleSheet,
     ScrollView
 } from 'react-native';
-import TopProduct from './TopProduct';
-import Category from './Category';
-import Collection from './Collection';
+import { StackNavigator } from 'react-navigation';
+
+import HomeView from './HomeView';
+import ListProduct from './ListProduct/ListProduct';
+import ProductDetail from './ProductDetail/ProductDetail';
+
 import icHome from '../../../../media/appIcon/home.png';
 
 
@@ -26,11 +29,7 @@ export default class Home extends Component {
 
     render() {
         return (
-            <ScrollView style={{ flex: 1, backgroundColor: '#CED8E7' }}>
-                <Collection />
-                <Category />
-                <TopProduct />
-            </ScrollView>
+            <HomeNavaigation />
         );
     }
 }
@@ -41,3 +40,15 @@ const styles = StyleSheet.create({
         height: '80%'
     }
 });
+
+const HomeNavaigation = StackNavigator(
+    {
+        Home_View: { screen: HomeView },
+        Product_Detail: { screen: ProductDetail },
+        List_Product: { screen: ListProduct }
+    },
+    {
+        headerMode: 'none',
+    }
+);
+
